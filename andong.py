@@ -173,7 +173,7 @@ def del_entry(cat, idx):
 
 for cat in cat_info:
     c_name = cat["name"]
-    st.markdown(f'<div class="{cat["class"]}">{c_name}</div>', unsafe_allow_html=True)
+    st.markdown(f"<h4 style='color: white;'>{cat['name']}</h4>", unsafe_allow_html=True)
     for i, entry in enumerate(st.session_state.multi_rows[c_name]):
         col_no, col_file, col_del = st.columns([1.5, 3, 0.5])
         with col_no: entry["no"] = st.text_input(f"번호##{c_name}_{i}", value=entry["no"], key=f"no_{c_name}_{i}", placeholder="납품번호", label_visibility="collapsed")
